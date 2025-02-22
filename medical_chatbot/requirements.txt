@@ -1,0 +1,25 @@
+# Django framework
+Django>=3.2,<4.0
+
+# Document extraction libraries
+pdfplumber>=0.5.28
+pytesseract>=0.3.9
+opencv-python>=4.5.5.64
+pydicom>=2.2.2
+pymupdf>=1.19.6
+
+# Embedding and indexing
+sentence-transformers>=2.2.2
+faiss-cpu>=1.7.2
+
+# Language model and chaining
+langchain>=0.0.137
+openai>=0.27.0
+
+# nnU-Net dependencies (if you plan to call it from your Django code)
+batchgenerators>=0.8.2
+SimpleITK>=2.2.1
+
+# ---------------------
+
+psycopg2-binary>=2.9

@@ -1,0 +1,10 @@
+{% extends "chatbot_app/base.html" %}
+{% block content %}
+<h2>OTP Verification for Patient ID: {{ patient_id }}</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="otp">Enter OTP:</label>
+    <input type="text" id="otp" name="otp" required>
+    <button type="submit" class="btn btn-primary">Verify OTP</button>
+</form>
+{% endblock %}

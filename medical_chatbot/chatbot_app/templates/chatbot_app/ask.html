@@ -1,0 +1,20 @@
+{% extends "chatbot_app/base.html" %}
+{% block content %}
+<h2>Ask a Medical Question</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Ask</button>
+</form>
+{% if answer %}
+  <hr>
+  <h4>Answer:</h4>
+  <p>{{ answer }}</p>
+  <h5>Related Documents:</h5>
+  <ul>
+    {% for doc in documents %}
+      <li>{{ doc.file.name }} ({{ doc.file_type }})</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "chatbot_app/base.html" %}
+{% block content %}
+<h2>Upload Document / Scan</h2>
+{% if message %}
+  <div class="alert alert-success">{{ message }}</div>
+{% endif %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "chatbot_app/base.html" %}
+{% block content %}
+<h2>Your Uploaded Documents</h2>
+{% if documents %}
+  <ul>
+    {% for doc in documents %}
+      <li>
+        {{ doc.file.name }} - {{ doc.file_type }} - Uploaded at {{ doc.uploaded_at|date:"M d, Y H:i" }}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>You have no uploaded documents.</p>
+{% endif %}
+{% endblock %}

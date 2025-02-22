@@ -76,10 +76,15 @@ WSGI_APPLICATION = 'medical_chatbot.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mydatabase',         
+        'USER': 'myuser',             
+        'PASSWORD': 'mypassword',     # Its stupid but these are the names and passwords kindly ignore
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation

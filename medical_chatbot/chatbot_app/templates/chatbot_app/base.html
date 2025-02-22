@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medical Chatbot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <a class="navbar-brand" href="{% url 'home' %}">Medical Chatbot</a>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="{% url 'upload' %}">Upload Document</a>
+            <a class="nav-item nav-link" href="{% url 'ask' %}">Ask a Question</a>
+            <a class="nav-item nav-link" href="{% url 'documents' %}">View Documents</a>
+        </div>
+    </nav>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
